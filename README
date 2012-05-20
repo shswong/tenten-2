@@ -2,12 +2,21 @@ Project:
 ========
 tennedv
 
+Version:
+========
+0.0.0 
+
+The application is versioned with this convention
+<major>.<minor>.<patch>
+  major = major release with more concern on stability.
+  minor = minor release with more concern on features. 
+  patch = patch release wtih more concern on fixing bugs
+
 Setup:
 ======
 It is recommended to use eclipse and google plugin for eclipse.
 Include the following dependencies: 
-
-
+  
 History:
 =======
 
@@ -18,3 +27,13 @@ Issues:
 Roadmap:
 =======
 
+
+
+Google App Engine's concepts: 
+============================
+An entity consists of:
+1. The entity's kind
+2. An identifier, which can be either
+    a key name string
+    an integer numeric ID
+3. An optional ancestor path locating the entity within the Datastore hierarchy
