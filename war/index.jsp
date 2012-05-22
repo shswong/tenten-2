@@ -5,13 +5,3 @@
 <%@ page import="java.text.MessageFormat" %>
 <%@ page import="com.dvliman.tenten.util.Flash" %>
 
-<html> 
-  <head> 
-    <title> News Engine </title>
-  </head> 
-  
-  <body> 
-  
-    hello world
-  </body> 
-</html>

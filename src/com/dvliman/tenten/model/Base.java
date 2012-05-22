@@ -5,7 +5,6 @@ package com.dvliman.tenten.model;
 public interface Base {
   static final String KEY = "k";
   static final String NAME = "n";
-  static final String DISPLAY_NAME = "d";
   static final String URL = "u";
-  
+  static final String DELETED = "d";
 }
