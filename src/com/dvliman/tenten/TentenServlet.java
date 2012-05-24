@@ -4,7 +4,7 @@ import java.io.IOException;
 import javax.servlet.http.*;
 
 import com.dvliman.tenten.model.User;
-import com.dvliman.tenten.service.UserService;
+import com.googlecode.objectify.ObjectifyService;
 
 @SuppressWarnings("serial")
 public class TentenServlet extends HttpServlet {
@@ -12,11 +12,9 @@ public class TentenServlet extends HttpServlet {
       throws IOException {
     resp.setContentType("text/plain");
     
-    User user = new User();
-    user.setKey(null);
-    user.setName("david Liman");
-    UserService uc = new UserService();
-    uc.save(user);
+    ObjectifyService.register(User.class);
+    User user = new User("david liman");
+    user.save();
     
     resp.getWriter().println("I am done writing to the database");
   }
