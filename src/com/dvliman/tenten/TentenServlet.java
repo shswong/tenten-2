@@ -12,8 +12,7 @@ public class TentenServlet extends HttpServlet {
       throws IOException {
     resp.setContentType("text/plain");
     
-    ObjectifyService.register(User.class);
-    User user = new User("david liman");
+    User user = new User("rosselini tennedy");
     user.save();
     
     resp.getWriter().println("I am done writing to the database");
