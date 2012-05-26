@@ -13,8 +13,6 @@ public class Base {
     DELETED, 
     FLAGGED
   }
-
-  private static final Objectify service = ObjectifyService.begin();
   
   static {
     ObjectifyService.register(User.class);
@@ -22,21 +20,34 @@ public class Base {
     ObjectifyService.register(Comment.class);
   }
   
-  public static Objectify getService() {
-    return service;
+  public Objectify getService() {
+    return ObjectifyService.begin();
   }
   
   public void save() {
+    Objectify service = getService();
     service.put(this);
   }
+
+  public void t_save() {
+    Objectify service = ObjectifyService.beginTransaction();
+    
+    try {
+      service.put(this);
+      service.getTxn().commit();
+    } finally {
+      if (service.getTxn().isActive())
+        service.getTxn().rollback();
+    }
+  }
   
-  // TODO: throw correct exception
   public List<?> query(String filter, String query) {
     if (filter == null)
-      throw new NullPointerException();
+      return null;
     if (query == null)
-      throw new NullPointerException();
+      return null;
     
+    Objectify service = getService();
     return (List<?>) service.query(this.getClass()).filter(filter, query);
   }
 }

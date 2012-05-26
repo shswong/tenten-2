@@ -10,7 +10,7 @@ The application is versioned with this convention
 <major>.<minor>.<patch>
   major = major release with more concern on stability.
   minor = minor release with more concern on features. 
-  patch = patch release wtih more concern on fixing bugs
+  patch = patch release with more concern on fixing bugs
 
 Setup:
 ======
@@ -27,36 +27,3 @@ Issues:
 Roadmap:
 =======
 Hacker News like + multi categories & no multi threaded comments
-
-TODO:
-=====
-
-<div id navigation> 
-  //insert each div to the following
-  categories 
-    computers 
-      software
-      hardware
-    Jual / beli
-      bla bla bla, you get the idea.
-  
-  top
-  newest
-  
-  //align to the right 
-  account
-    settings 
-    logout
-</div>
-
-inspiration
-  quora.com 
-  meetup.com
-  http://www.api-jobs.com/ (ini modif dari twitter bootstrap ini. ganti merah tp pake themes ini)
-  linkedin.com
-  github.com
-  
-  gw suka themes mirip mirip github. dan linkedin. simple dan professional
-  abu abu gituh 
-  comment stylenya mirip github punya
-  
