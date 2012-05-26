@@ -12,7 +12,7 @@ public class TentenServlet extends HttpServlet {
       throws IOException {
     resp.setContentType("text/plain");
     
-    User user = new User("rosselini tennedy");
+    User user = new User("jimmy horlick teng");
     user.save();
     
     resp.getWriter().println("I am done writing to the database");

@@ -1,5 +1,8 @@
 package com.dvliman.tenten.model; 
 
-public class Comment {
+import javax.persistence.Id;
+
+public class Comment extends Base {
+  @Id private Long id;
   
 }
